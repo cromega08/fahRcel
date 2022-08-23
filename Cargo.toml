@@ -1,0 +1,17 @@
+[package]
+name = "fahrcel"
+version = "1.0.0"
+edition = "2021"
+authors = ["Cromega <cr.jrg08@gmail.com>"]
+license = "AGPL-3.0-or-later"
+description = "A CLI tool to make Fahrenheit <--> Celsius convertions"
+readme = "README.md"
+homepage = "https://github.com/cromega08/fahRcel"
+repository = "https://github.com/cromega08/fahRcel"
+keywords = ["cli", "demo"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.0", features = ["derive"] }
