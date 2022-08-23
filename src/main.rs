@@ -6,7 +6,7 @@ fn main() {
 	let v_type = data.v_type;
 	let v_num = data.v_num;
 
-	let value: i32 = match v_num.trim().parse() {
+	let value: f32 = match v_num.trim().parse::<f32>() {
 		Ok(num) => num,
 		Err(_) => {
 			println!("\n=> Incorrect input, need to include a numeric value\n");
@@ -24,12 +24,12 @@ fn main() {
 	}
 
 	if v_type.contains('f') {
-		let output = value * (9/5) + 32;
+		let output = value * 1.8 + 32.0;
 		println!("\nResult c -> fh = {output}")
 	}
 	if v_type.contains('c') {
-		let output = (value-32) * (5/9);
-		println!("\nResult fh -> c = {output}")
+		let output = (value-32.0) * 0.555555556;
+		println!("\nResult fh -> c = {output}");
 	}
 }
 
