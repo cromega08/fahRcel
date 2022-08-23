@@ -41,11 +41,11 @@ fn main() {
 
 	if v_type.contains('f') {
 		let output = value * 1.8 + 32.0;
-		println!("\nResult c -> fh = {output}")
+		println!("\nResult: {value}c = {output}fh")
 	}
 	if v_type.contains('c') {
 		let output = (value-32.0) * 0.555555556;
-		println!("\nResult fh -> c = {output}");
+		println!("\nResult: {value}fh = {output}c");
 	}
 }
 
@@ -56,7 +56,7 @@ fn main() {
 #[clap(about = "Fahr <-> Cel converter", long_about = "A CLI tool to make Fahrenheit <--> Celsius convertions")]
 #[clap(allow_negative_numbers = true)]
 struct Data {
-	#[clap(name = "type", help = "f || c", long_help = "option to convert: f = 'to fahrenheit' || c = 'to celsius'", value_parser)]
+	#[clap(name = "output_type", help = "f || c", long_help = "option to convert: f = 'to fahrenheit' || c = 'to celsius'", value_parser)]
 	v_type: String,
 	#[clap(name = "number", help = "ex. 5", long_help = "value to convert: 5 || -5 || 0 || 100", value_parser)]
 	v_num: String
